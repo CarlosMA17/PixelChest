@@ -1,0 +1,61 @@
+[gd_scene load_steps=5 format=3 uid="uid://nu72sb2y0vov"]
+
+[ext_resource type="PackedScene" uid="uid://cqi2romv50kxk" path="res://escenas/player.tscn" id="1_6lokx"]
+[ext_resource type="PackedScene" uid="uid://cn88q0o5t3lih" path="res://escenas/tile_map.tscn" id="2_5l43i"]
+[ext_resource type="PackedScene" uid="uid://6g36kygdgi1r" path="res://escenas/chest.tscn" id="3_xjku8"]
+[ext_resource type="PackedScene" uid="uid://lqrrmiegov1i" path="res://escenas/objects/spikes.tscn" id="4_ydli0"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="TileMap" parent="." instance=ExtResource("2_5l43i")]
+
+[node name="Spikes7" parent="." instance=ExtResource("4_ydli0")]
+position = Vector2(37, 22)
+
+[node name="chest" parent="." instance=ExtResource("3_xjku8")]
+position = Vector2(-184, -84)
+
+[node name="chest2" parent="." instance=ExtResource("3_xjku8")]
+position = Vector2(-133, 103)
+
+[node name="chest3" parent="." instance=ExtResource("3_xjku8")]
+position = Vector2(358, -27)
+
+[node name="chest4" parent="." instance=ExtResource("3_xjku8")]
+position = Vector2(218, 117)
+
+[node name="chest5" parent="." instance=ExtResource("3_xjku8")]
+position = Vector2(24, 191)
+
+[node name="chest6" parent="." instance=ExtResource("3_xjku8")]
+position = Vector2(-297, -247)
+
+[node name="Spikes" parent="." instance=ExtResource("4_ydli0")]
+position = Vector2(-91, 82)
+
+[node name="Spikes2" parent="." instance=ExtResource("4_ydli0")]
+position = Vector2(-112, 123)
+
+[node name="Spikes3" parent="." instance=ExtResource("4_ydli0")]
+position = Vector2(193, 132)
+
+[node name="Spikes4" parent="." instance=ExtResource("4_ydli0")]
+position = Vector2(25, 178)
+
+[node name="Spikes5" parent="." instance=ExtResource("4_ydli0")]
+position = Vector2(7, 192)
+
+[node name="Spikes6" parent="." instance=ExtResource("4_ydli0")]
+position = Vector2(-183, -96)
+
+[node name="Spikes8" parent="." instance=ExtResource("4_ydli0")]
+position = Vector2(358, -38)
+
+[node name="Spikes9" parent="." instance=ExtResource("4_ydli0")]
+position = Vector2(375, -25)
+
+[node name="Spikes10" parent="." instance=ExtResource("4_ydli0")]
+position = Vector2(340, -26)
+
+[node name="Player" parent="." instance=ExtResource("1_6lokx")]
+position = Vector2(1, 0)

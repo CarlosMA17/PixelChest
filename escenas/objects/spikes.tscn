@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://lqrrmiegov1i"]
+
+[ext_resource type="Script" path="res://escenas/objects/Area2D.gd" id="1_j2f7f"]
+[ext_resource type="Texture2D" uid="uid://b76iljewdjtix" path="res://textures/objects/Individual Spike.png" id="2_bqsnp"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_x2tms"]
+radius = 3.0
+height = 16.0
+
+[node name="Spikes" type="Node2D"]
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("1_j2f7f")
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+position = Vector2(0, -0.25)
+scale = Vector2(1, 0.944445)
+texture = ExtResource("2_bqsnp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, -1)
+rotation = -1.5708
+shape = SubResource("CapsuleShape2D_x2tms")
+
+[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

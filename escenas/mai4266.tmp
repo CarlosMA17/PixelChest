@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://nu72sb2y0vov"]
+
+[ext_resource type="PackedScene" uid="uid://cqi2romv50kxk" path="res://escenas/player.tscn" id="1_6lokx"]
+[ext_resource type="PackedScene" uid="uid://cn88q0o5t3lih" path="res://escenas/tile_map.tscn" id="2_5l43i"]
+[ext_resource type="PackedScene" uid="uid://6g36kygdgi1r" path="res://Scripts/node_2d.tscn" id="3_xjku8"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="TileMap" parent="." instance=ExtResource("2_5l43i")]
+
+[node name="Player" parent="." instance=ExtResource("1_6lokx")]
+position = Vector2(1, 0)
+
+[node name="Node2D" parent="." instance=ExtResource("3_xjku8")]
+position = Vector2(-184, -84)
+
+[node name="Node2D2" parent="." instance=ExtResource("3_xjku8")]
+position = Vector2(-133, 103)
+
+[node name="Node2D3" parent="." instance=ExtResource("3_xjku8")]
+position = Vector2(358, -27)
+
+[node name="Node2D4" parent="." instance=ExtResource("3_xjku8")]
+position = Vector2(218, 117)
+
+[node name="Node2D5" parent="." instance=ExtResource("3_xjku8")]
+position = Vector2(24, 191)
+
+[node name="Node2D6" parent="." instance=ExtResource("3_xjku8")]
+position = Vector2(-297, -247)

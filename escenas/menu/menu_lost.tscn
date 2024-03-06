@@ -1,0 +1,128 @@
+[gd_scene load_steps=9 format=3 uid="uid://hcdrtxlqkbdm"]
+
+[ext_resource type="Script" path="res://escenas/menu/mainMenu.gd" id="1_qx5i3"]
+[ext_resource type="Texture2D" uid="uid://ctmx7mfltjf34" path="res://textures/fondoMenus.png" id="2_5o2rp"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_54ole"]
+
+[sub_resource type="FontVariation" id="FontVariation_qb1yu"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_eijwn"]
+font = SubResource("FontVariation_qb1yu")
+font_size = 54
+font_color = Color(0.454902, 0, 0.294118, 1)
+outline_size = 3
+
+[sub_resource type="LabelSettings" id="LabelSettings_richg"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_12l7s"]
+font_size = 34
+font_color = Color(1, 0, 0, 1)
+shadow_size = 3
+shadow_color = Color(0.596078, 0, 0, 0.662745)
+shadow_offset = Vector2(3, 3)
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_bq03d"]
+
+[node name="menuLost" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qx5i3")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 2
+position = Vector2(-8, -25)
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("2_5o2rp")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 0.466667)
+position = Vector2(-0.500021, 85)
+scale = Vector2(461, 464)
+texture = SubResource("CanvasTexture_54ole")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -196.0
+offset_top = -54.5
+offset_right = 196.0
+offset_bottom = 54.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+custom_minimum_size = Vector2(0, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+text = "PIXEL CHESTS"
+label_settings = SubResource("LabelSettings_eijwn")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+
+[node name="exitButton" type="Button" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "    Salir del juego     "
+
+[node name="playButton" type="Button" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "  empezar  partida  "
+
+[node name="Button" type="Button" parent="VBoxContainer/HBoxContainer"]
+layout_mode = 2
+text = "obtener puntos"
+
+[node name="Label2" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+label_settings = SubResource("LabelSettings_richg")
+
+[node name="lostMessage" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -120.0
+offset_top = -202.0
+offset_right = 99.0
+offset_bottom = -155.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "HAS MUERTO"
+label_settings = SubResource("LabelSettings_12l7s")
+
+[node name="Sprite2D3" type="Sprite2D" parent="."]
+modulate = Color(1, 0, 0, 0.137255)
+position = Vector2(-154, -257)
+scale = Vector2(300, 150)
+texture = SubResource("CanvasTexture_bq03d")
+centered = false
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = -138.0
+offset_top = -146.0
+offset_right = -79.0
+offset_bottom = -106.0
+
+[node name="Label" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+text = "Puntos:"
+
+[node name="moneyPoints" type="Label" parent="HBoxContainer"]
+layout_mode = 2
+
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/exitButton" to="." method="_on_exit_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/playButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="VBoxContainer/HBoxContainer/Button" to="." method="_on_button_pressed"]
